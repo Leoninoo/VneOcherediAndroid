@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="vegetables" type="id"/>
+    <item name="milk" type="id"/>
+    <item name="meat" type="id"/>
+    <item name="fish" type="id"/>
+</resources>

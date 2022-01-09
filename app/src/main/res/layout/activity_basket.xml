@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.BasketActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/basket_go_map"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="24dp"
+        app:cardBackgroundColor="@color/main_violet"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/basket_list"
+        app:layout_constraintStart_toStartOf="@+id/basket_list">
+
+        <TextView
+            android:id="@+id/basket_go_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/rubik"
+            android:text="@string/arrange"
+            android:textColor="@color/white" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/basket_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/basket_string"
+        android:fontFamily="@font/rubik_bold"
+        android:textColor="@color/main_violet"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/basket_back"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintBottom_toBottomOf="@+id/basket_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/basket_name" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/basket_list"
+        android:layout_width="0dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="@+id/basket_name"
+        app:layout_constraintStart_toStartOf="@+id/basket_back"
+        app:layout_constraintTop_toBottomOf="@+id/basket_back" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/clear_basket_button"
+        android:layout_width="200dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="16dp"
+        app:cardBackgroundColor="@color/grey"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="0dp"
+        app:layout_constraintStart_toStartOf="@+id/basket_list"
+        app:layout_constraintTop_toBottomOf="@+id/basket_list">
+
+        <TextView
+            android:id="@+id/clear_basket_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/rubik_bold"
+            android:text="@string/clear_basket"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/promo_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/rubik"
+        android:text="@string/promo"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/clear_basket_button"
+        app:layout_constraintTop_toBottomOf="@+id/clear_basket_button" />
+
+    <TextView
+        android:id="@+id/delivery_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/rubik"
+        android:text="@string/delivery"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/clear_basket_button"
+        app:layout_constraintTop_toBottomOf="@+id/promo_name" />
+
+    <TextView
+        android:id="@+id/sum_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="@string/sum"
+        android:fontFamily="@font/rubik_medium"
+        android:textColor="@color/main_violet"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/basket_go_map"
+        app:layout_constraintStart_toStartOf="@+id/basket_go_map" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView2"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="-4dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="@+id/basket_list"
+        app:layout_constraintTop_toTopOf="@+id/promo_name"
+        app:strokeColor="@color/grey"
+        app:strokeWidth="0.8dp">
+
+        <EditText
+            android:id="@+id/promo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="10dp"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:fontFamily="@font/rubik_medium"
+            android:inputType="textPersonName"
+            android:textSize="13sp" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/delivery_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-4dp"
+        android:text="@string/delivery_price"
+        android:fontFamily="@font/rubik_medium"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/materialCardView2"
+        app:layout_constraintStart_toStartOf="@+id/materialCardView2"
+        app:layout_constraintTop_toTopOf="@+id/delivery_name" />
+
+    <TextView
+        android:id="@+id/total_price_basket"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rubik_medium"
+        android:text="@string/delivery_price"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/sum_name"
+        app:layout_constraintEnd_toEndOf="@+id/materialCardView2"
+        app:layout_constraintStart_toStartOf="@+id/materialCardView2"
+        app:layout_constraintTop_toTopOf="@+id/sum_name" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
